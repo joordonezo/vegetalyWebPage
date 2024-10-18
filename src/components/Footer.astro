@@ -1,16 +1,63 @@
 ---
 const currentYear = new Date().getFullYear();
 ---
+
 <footer>
-	<p>&copy; {currentYear} Vegetaly Foods. Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <!-- <a href="https://www.facebook.com/vegetaly" aria-label="Facebook" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.twitter.com/vegetaly" aria-label="Twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i>
+    </a>-->
+    <a href="https://www.instagram.com/vegetaly_foods" aria-label="Instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/vegetaly-foods" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <!--<a href="https://www.youtube.com/vegetaly" aria-label="YouTube" target="_blank" rel="noopener">
+      <i class="fab fa-youtube"></i>
+    </a> -->
+    <a href="https://www.tiktok.com/@vegetaly_foods" aria-label="TikTok" target="_blank" rel="noopener">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+  <p>&copy; {currentYear} Vegetaly Foods. Todos los derechos reservados.</p>
 </footer>
 
 <style>
-	footer {
-		background-color: rgb(var(--accent-dark));
-		color: white;
-		text-align: center;
-		padding: 1rem;
-		margin-top: 2rem;
-	}
+  footer {
+    background-color: rgb(var(--accent-dark));
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-icons {
+    margin-bottom: 1rem;
+  }
+
+  .social-icons a {
+    margin: 0 1rem;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none; /* Elimina el subrayado en enlaces */
+  }
+
+  .social-icons a:hover {
+    color: rgb(var(--accent-light));
+  }
+
+  i {
+    vertical-align: middle;
+  }
+
+  /* Elimina espacios en blanco entre los iconos */
+  .social-icons a i::after {
+    content: "";
+    display: none;
+  }
 </style>
