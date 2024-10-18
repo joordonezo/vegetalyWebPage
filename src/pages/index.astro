@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Vegetaly Foods - Mezclas vegetales que te facilitan la vida" description="Vegetaly Foods ofrece mezclas prácticas y sencillas de productos vegetales de excelente calidad para facilitar la preparación de alimentos tradicionales.">
+	<h1>Bienvenidos a Vegetaly Foods</h1>
+	<p class="slogan">¡Del campo a tu plato!</p>
+	<p>Somos una empresa Manizaleña dedicada a la producción de vegetales  troceados de diferentes tamaños y formas; individuales o en mezclas, que te facilitan la vida.</p>
+	<section>
+		<h2>Nuestro Propósito</h2>
+		<p>En Vegetaly Foods, nos dedicamos a facilitar la preparación de alimentos tradicionales mediante mezclas prácticas y sencillas de productos vegetales de excelente calidad.</p>
+	</section>
+	<section>
+		<h2>Descubre Nuestros Productos</h2>
+		<p>Explora nuestra gama de vegetales empacados al vacío, diseñados para hacer tu vida más fácil.</p>
+		<a href="/products" class="cta-button">Ver Catálogo</a>
+	</section>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+	.slogan {
+		font-family: 'Jenna Sue', cursive;
+		font-size: 1.8rem;
+		text-align: center;
+		color: rgb(var(--accent));
+		margin-bottom: 1rem;
+	}
+	p {
+		text-align: center;
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+	section {
+		margin-bottom: 2rem;
+	}
+	.cta-button {
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+		background-color: rgb(var(--accent));
+		color: white;
+		padding: 0.5rem 1rem;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+	}
+	.cta-button:hover {
+		background-color: rgb(var(--accent-light));
+	}
+	@media (min-width: 768px) {
+		h1 {
+			font-size: 3rem;
+		}
+		.slogan {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.2rem;
+		}
+		.cta-button {
+			display: inline-block;
+			width: auto;
+		}
+	}
+</style>

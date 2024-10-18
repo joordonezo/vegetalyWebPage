@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCarousel from '../components/ProductCarousel.astro';
+
+const products = [
+	{ name: 'Piña en cubos', image: '/images/1.jpg' },
+	{ name: 'Tomate en rodajas', image: '/images/2.jpg' },
+	{ name: 'Papa en rodajas', image: '/images/3.jpg' },
+	{ name: 'Apio en trozos', image: '/images/4.jpg' },
+	{ name: 'Zanahoria rallada', image: '/images/5.jpg' },
+	{ name: 'Ahuyama en cubos', image: '/images/6.jpg' },
+	{ name: 'Pimentón en julianas', image: '/images/7.jpg' },
+	{ name: 'Pepino en rodajas', image: '/images/8.jpg' },
+	{ name: 'Cebolla cabezona en cubos', image: '/images/9.jpg' },
+	{ name: 'Repollo morado rallado', image: '/images/10.jpg' },
+	{ name: 'Papa criolla en cubos', image: '/images/11.jpg' },
+	{ name: 'Tomate en cubos', image: '/images/12.jpg' },
+	{ name: 'Zanahoria en cubos', image: '/images/13.jpg' },
+	{ name: 'Cebolla morada en cubos', image: '/images/14.jpg' },
+	{ name: 'Repollo rallado', image: '/images/15.jpg' },
+	{ name: 'Papa en cubos', image: '/images/16.jpg' },
+	{ name: 'Hogao', image: '/images/17.jpg' },
+	{ name: 'Monedas de platano verde', image: '/images/18.jpg' },
+	{ name: 'Habichuela y zanahoria', image: '/images/19.jpg' },
+];
+---
+
+<Layout title="Catálogo de Productos - Vegetaly Foods" description="Descubre nuestra gama de mezclas vegetales prácticas y sencillas para la preparación de alimentos tradicionales.">
+	<h1>Nuestro Catálogo de Productos</h1>
+	<ProductCarousel products={products} />
+</Layout>
+
+<style>
+	h1 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+</style>

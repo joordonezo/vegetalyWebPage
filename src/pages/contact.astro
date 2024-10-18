@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contacto - Vegetaly Foods" description="Ponte en contacto con Vegetaly Foods para más información sobre nuestras mezclas vegetales prácticas y sencillas.">
+	<h1>Contacto</h1>
+
+	<!-- Información de contacto -->
+	<div class="contact-info">
+		<p><a href="https://wa.me/573168780577" target="_blank"><div class="contact-item">
+			<i class="fab fa-whatsapp"></i>
+			<span>+57 3168780577</span>
+		</div></a></p>
+		<p><a href="mailto:comercial@vegetaly.org?subject=¡Quiero%20más%20información!&body=Hola,%20quisiera%20obtener%20más%20información%20acerca%20de..." target="_blank"><div class="contact-item">
+			<i class="fa fa-envelope"></i>
+			<span>comercial@vegetaly.org</span>
+		</div></a></p>
+	</div>
+
+	<!-- Formulario de contacto -->
+	<form action="https://formspree.io/f/xrbggdoj" method="POST"> 
+		<label for="name">Nombre:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="email">Correo electrónico:</label>
+		<input type="email" id="email" name="email" required>
+		
+		<label for="message">Mensaje:</label>
+		<textarea id="message" name="message" required></textarea>
+		
+		<button type="submit">Enviar</button>
+	</form>
+</Layout>
+
+<style>
+	h1 {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+	.contact-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+	.contact-item i {
+		margin-right: 0.5rem;
+		color: rgb(var(--accent));
+	}
+	.contact-item a {
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	.contact-item a:hover {
+		color: rgb(var(--accent-light));
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	label {
+		margin-top: 1rem;
+	}
+	input, textarea {
+		padding: 0.5rem;
+		margin-top: 0.5rem;
+		border: 1px solid rgb(var(--accent));
+		border-radius: 5px;
+		font-size: 1rem;
+	}
+	textarea {
+		min-height: 150px;
+	}
+	button {
+		margin-top: 1rem;
+		padding: 0.5rem 1rem;
+		background-color: rgb(var(--accent));
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		font-size: 1rem;
+	}
+	button:hover {
+		background-color: rgb(var(--accent-light));
+	}
+	@media (min-width: 768px) {
+		form {
+			padding: 0;
+		}
+	}
+</style>

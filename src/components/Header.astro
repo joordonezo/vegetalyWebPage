@@ -1,0 +1,152 @@
+---
+---
+<header>
+	<nav>
+		<div class="logo">
+			<img src="/images/logo.png" alt="Vegetaly Foods Logo" />
+		</div>
+		<input type="checkbox" id="nav-toggle" class="nav-toggle">
+		<label for="nav-toggle" class="nav-toggle-label">
+			<span></span>
+		</label>
+		<ul>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="/about">Quiénes Somos</a></li>
+			<li><a href="/products">Catálogo</a></li>
+			<li><a href="/contact">Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+header {
+    background-color: rgb(var(--accent));
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: rgb(var(--accent));
+    width: 200px;
+    text-align: center;
+}
+
+li {
+    margin: 1rem 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(var(--accent-light));
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2rem;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    ul {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        background-color: transparent;
+        width: auto;
+    }
+
+    li {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .nav-toggle-label {
+        margin-left: auto;
+    }
+
+    ul {
+        width: 200px;
+        flex-direction: column;
+        display: none;
+        right: 0;
+        text-align: center;
+    }
+
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    li {
+        margin: 1rem 0;
+    }
+}
+</style>

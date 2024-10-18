@@ -1,0 +1,61 @@
+---
+interface Product {
+	name: string;
+	image: string;
+}
+
+interface Props {
+	products: Product[];
+}
+
+const { products } = Astro.props;
+---
+
+<div class="carousel">
+	{products.map((product) => (
+		<div class="carousel-item">
+			<img src={product.image} alt={product.name} />
+			<h3>{product.name}</h3>
+		</div>
+	))}
+</div>
+
+<style>
+	.carousel {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1rem;
+		padding: 1rem;
+		background-color: #5D8300;
+		border-radius: 10px;
+	}
+	.carousel-item {
+		background-color: white;
+		border-radius: 5px;
+		padding: 1rem;
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+	.carousel-item:hover {
+		transform: scale(1.05);
+	}
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+	h3 {
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		color: rgb(var(--accent));
+	}
+	@media (max-width: 767px) {
+		.carousel {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		}
+		img {
+			height: 150px;
+		}
+	}
+</style>
