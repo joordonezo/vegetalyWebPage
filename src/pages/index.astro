@@ -3,25 +3,28 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Vegetaly Foods - Mezclas vegetales que te facilitan la vida" description="Vegetaly Foods ofrece mezclas prácticas y sencillas de productos vegetales de excelente calidad para facilitar la preparación de alimentos tradicionales.">
-	<h1>Bienvenidos a Vegetaly Foods</h1>
+	<h2>Bienvenidos a Vegetaly Foods</h2>
 	<p class="slogan">¡Del campo a tu plato!</p>
 	<p>Somos una empresa Manizaleña dedicada a la producción de vegetales  troceados de diferentes tamaños y formas; individuales o en mezclas, que te facilitan la vida.</p>
+	<section class="header-image">
+		<img src="/images/cebollaTomate.png" alt="Vegetales frescos" class="hero-image" />
+	</section>
 	<section>
-		<h2>Nuestro Propósito</h2>
+		<h2 class="subtitle">Nuestro Propósito</h2>
 		<p>En Vegetaly Foods, nos dedicamos a facilitar la preparación de alimentos tradicionales mediante mezclas prácticas y sencillas de productos vegetales de excelente calidad.</p>
 	</section>
 	<section>
-		<h2>Descubre Nuestros Productos</h2>
+		<h2 class="subtitle">Descubre Nuestros Productos</h2>
 		<p>Explora nuestra gama de vegetales empacados al vacío, diseñados para hacer tu vida más fácil.</p>
 		<a href="/products" class="cta-button">Ver Catálogo</a>
 	</section>
 </Layout>
 
 <style>
-	h1 {
-		font-size: 2.5rem;
+	h2 {
+		font-size: 2rem;
 		text-align: center;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.25rem;
 	}
 	.slogan {
 		font-family: 'Oswald', sans-serif;
@@ -53,6 +56,27 @@ import Layout from '../layouts/Layout.astro';
 	.cta-button:hover {
 		background-color: rgb(var(--accent-light));
 	}
+
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	.header-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	.hero-image {
+		width: 100%;
+		height: auto;
+		max-width: 600px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
 	@media (min-width: 768px) {
 		h1 {
 			font-size: 3rem;
@@ -62,10 +86,6 @@ import Layout from '../layouts/Layout.astro';
 		}
 		p {
 			font-size: 1.2rem;
-		}
-		.cta-button {
-			display: inline-block;
-			width: auto;
 		}
 	}
 </style>

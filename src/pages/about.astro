@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Quiénes Somos - Vegetaly Foods" description="Vegetaly Foods es una empresa manizaleña enfocada en facilitar la preparación de alimentos tradicionales mediante mezclas prácticas y sencillas de productos vegetales de excelente calidad.">
+	
+	<section class="header-image-about">
+		<img src="/images/zanahoriaPina.png" alt="Vegetales frescos" class="hero-image-about" />
+	</section>
 	<h1>Quiénes Somos</h1>
 	<p>Somos una empresa manizaleña enfocada en facilitar la preparación de alimentos tradicionales, mediante mezclas prácticas y sencillas de productos vegetales de excelente calidad.</p>
 	
@@ -28,5 +32,17 @@ import Layout from '../layouts/Layout.astro';
 	}
 	section {
 		margin-bottom: 2rem;
+	}
+
+	.header-image-about {
+		position: absolute;
+		z-index: -1;
+		right: 2.5rem;
+	}
+
+	.hero-image-about {
+		width: 100%;
+		height: auto;
+		max-width: 150px;
 	}
 </style>
