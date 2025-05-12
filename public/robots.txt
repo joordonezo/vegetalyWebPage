@@ -9,4 +9,4 @@ Disallow: /private/
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.vegetaly.com/sitemap-index.xml
+Sitemap: https://www.vegetaly.org/sitemap-index.xml
