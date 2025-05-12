@@ -1,0 +1,12 @@
+# robots.txt for Vegetaly Web Page
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Allow all other pages
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.vegetaly.com/sitemap.xml
